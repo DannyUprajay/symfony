@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+   <h1>{{ category.label }}</h1>
+   <ul>
+    {%  for media in category.medias %}
+     <li>  {{ media.title }}, créer par {{ media.user. email }}, le {{ media.createdAt|date('y-m-d H:i')}} </li>
+        {% endfor %}
+   </ul>
+
+{% endblock %}

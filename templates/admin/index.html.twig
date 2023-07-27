@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+    <h1>Pannel d'administration
+    </h1>
+    <h2>Les catégories :</h2>
+    <a href="{{ path('app_category') }}">Catégorie</a>
+    <h2>Les medias :</h2>
+    <a href="{{ path('app_media') }}">Media</a>
+{% endblock %}

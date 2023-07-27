@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+<h1>Liste des catégories</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.categoryName) }}
+    <button type="submit">Recherche</button>
+    {{ form_end(form) }}
+
+    <ul>
+        {% for category in categories %}
+            <li> <a href="{{ path('app_category_show', {'id': category.id}) }}">{{ category.label }}</a>
+                <a href="{{ path('app_category_delete' , {'id': category.id})  }}" >Delete</a>
+                <a href="{{ path('app_category_edit' , {'id': category.id})  }}" >Edit</a>
+            </li>
+
+
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,8 @@
+
+App\Entity\Category:
+    category0:
+        label: "Manga"
+    category1:
+        label: "Comics"
+    category{2..50}:
+        label: "<word()>"
